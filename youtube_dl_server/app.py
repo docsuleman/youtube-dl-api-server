@@ -159,7 +159,9 @@ def info():
 @route_api('play')
 def play():
     result = flatten_result(get_result())
-    return redirect(result[0]['url'])
+    result2=result[0]['url']
+    result2=result2.replace(".googlevideo.com",".c.doc-0-0-sj.sj.googleusercontent.com")
+    return redirect(result2)
 
 
 @route_api('extractors')
